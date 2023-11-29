@@ -1,0 +1,31 @@
+# Set headers
+Header set APACHE_MOD_ACCESS_COMPAT OFF
+Header set APACHE_MOD_EXPIRES OFF
+Header set APACHE_MOD_HEADERS OFF
+Header set APACHE_MOD_MIME OFF
+Header set APACHE_MOD_REWRITE OFF
+Header set APACHE_MOD_SETENVIF OFF
+Header set APACHE_MOD_SSL OFF
+
+# Check modules
+<IfModule mod_access_compat.c>
+    Header set APACHE_MOD_ACCESS_COMPAT ON
+</IfModule>
+<IfModule mod_expires.c> 
+    Header set APACHE_MOD_EXPIRES ON 
+</IfModule>
+<IfModule mod_headers.c>
+    Header set APACHE_MOD_HEADERS ON
+</IfModule>
+<IfModule mod_mime.c>
+    Header set APACHE_MOD_MIME ON
+</IfModule>
+<IfModule mod_rewrite.c>
+    Header set APACHE_MOD_REWRITE ON
+</IfModule>
+<IfModule mod_setenvif.c>
+    Header set APACHE_MOD_SETENVIF ON
+</IfModule>
+<IfModule mod_ssl.c>
+    Header set APACHE_MOD_SSL ON
+</IfModule>
